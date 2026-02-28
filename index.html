@@ -35,9 +35,9 @@
       justify-content: center;
       gap: 32px;
       background:
-        radial-gradient(ellipse at 50% 100%, rgba(0,120,50,0.5) 0%, transparent 70%),
-        radial-gradient(ellipse at 50% 0%, rgba(0,100,160,0.4) 0%, transparent 60%),
-        linear-gradient(180deg, #071a10 0%, #0d2a14 60%, #071208 100%);
+        radial-gradient(ellipse at 50% 100%, rgba(0, 50, 120, 0.5) 0%, transparent 70%),
+        radial-gradient(ellipse at 50% 0%, rgba(37, 172, 255, 0.4) 0%, transparent 60%),
+        linear-gradient(180deg, #1a475b 0%, #154c56 60%, #071208 100%);
       transition: opacity 0.7s ease, visibility 0.7s;
     }
     #play-overlay.hidden {
@@ -133,13 +133,7 @@
     }
     .logo-text .aqua { color: #ffffff; text-shadow: 0 0 20px rgba(255,255,255,0.3), 3px 3px 0 #1a4a1a; }
     .logo-text .guard { color: #00b4d8; text-shadow: 0 0 20px rgba(0,180,216,0.6), 3px 3px 0 #003d55; }
-    .logo-tagline {
-      font-family: 'Press Start 2P', monospace;
-      font-size: clamp(0.28rem, 0.8vw, 0.42rem);
-      color: rgba(100, 200, 120, 0.75);
-      letter-spacing: 3px;
-      margin-top: 14px;
-    }
+
 
     /* Play button */
     .play-btn-wrap {
@@ -156,14 +150,14 @@
       position: absolute;
       inset: -25px;
       border-radius: 50%;
-      border: 1px solid rgba(93,202,93,0.2);
+      border: 1px solid rgba(93, 131, 202, 0.2);
       animation: ringExpand 3s ease-out infinite;
     }
     .ring-outer-2 {
       position: absolute;
       inset: -10px;
       border-radius: 50%;
-      border: 1px solid rgba(93,202,93,0.3);
+      border: 1px solid rgba(93, 129, 202, 0.3);
       animation: ringExpand 3s ease-out infinite;
       animation-delay: 1s;
     }
@@ -176,25 +170,25 @@
       width: 110px;
       height: 110px;
       border-radius: 50%;
-      background: radial-gradient(circle at 35% 30%, rgba(100,220,100,0.25), rgba(0,60,20,0.9));
-      border: 3px solid #5dca5d;
+      background: radial-gradient(circle at 35% 30%, rgba(100, 160, 220, 0.25), rgba(0, 37, 60, 0.9));
+      border: 3px solid #5d90ca;
       display: flex;
       align-items: center;
       justify-content: center;
       box-shadow:
-        0 0 0 6px rgba(93,202,93,0.08),
-        0 0 30px rgba(93,202,93,0.4),
+        0 0 0 6px rgba(93, 137, 202, 0.08),
+        0 0 30px rgba(93, 118, 202, 0.4),
         inset 0 0 30px rgba(0,0,0,0.5);
       transition: transform 0.2s ease, box-shadow 0.3s ease;
       animation: playPulse 2.5s ease-in-out infinite;
     }
     @keyframes playPulse {
-      0%, 100% { box-shadow: 0 0 0 6px rgba(93,202,93,0.08), 0 0 30px rgba(93,202,93,0.4), inset 0 0 30px rgba(0,0,0,0.5); }
-      50%       { box-shadow: 0 0 0 12px rgba(93,202,93,0.05), 0 0 55px rgba(93,202,93,0.65), inset 0 0 30px rgba(0,0,0,0.5); }
+      0%, 100% { box-shadow: 0 0 0 6px rgba(93, 167, 202, 0.08), 0 0 30px rgba(93, 137, 202, 0.4), inset 0 0 30px rgba(0,0,0,0.5); }
+      50%       { box-shadow: 0 0 0 12px rgba(93, 142, 202, 0.05), 0 0 55px rgba(93, 153, 202, 0.65), inset 0 0 30px rgba(0,0,0,0.5); }
     }
     .play-btn-wrap:hover .play-circle {
       transform: scale(1.1);
-      box-shadow: 0 0 0 10px rgba(93,202,93,0.1), 0 0 70px rgba(93,202,93,0.8), inset 0 0 30px rgba(0,0,0,0.5);
+      box-shadow: 0 0 0 10px rgba(93, 113, 202, 0.1), 0 0 70px rgba(93, 153, 202, 0.8), inset 0 0 30px rgba(0,0,0,0.5);
     }
     .play-btn-wrap:active .play-circle {
       transform: scale(0.96);
@@ -204,15 +198,15 @@
       width: 0; height: 0;
       border-top: 22px solid transparent;
       border-bottom: 22px solid transparent;
-      border-left: 38px solid #7dff7d;
+      border-left: 38px solid #7ddaff;
       margin-left: 10px;
-      filter: drop-shadow(0 0 10px rgba(100,255,100,0.9));
+      filter: drop-shadow(0 0 10px rgba(100, 167, 255, 0.9));
     }
 
     .play-label {
       font-family: 'Press Start 2P', monospace;
       font-size: clamp(0.38rem, 1vw, 0.55rem);
-      color: rgba(180, 230, 180, 0.75);
+      color: rgba(180, 188, 230, 0.75);
       letter-spacing: 5px;
       position: relative;
       z-index: 2;
@@ -247,7 +241,7 @@
     .bar-outer {
       width: clamp(200px, 40vw, 320px);
       height: 20px;
-      border: 2px solid #5dca5d;
+      border: 2px solid #5db6ca;
       border-radius: 10px;
       overflow: hidden;
       background: rgba(0,0,0,0.5);
@@ -255,10 +249,10 @@
     .bar-inner {
       height: 100%;
       width: 0%;
-      background: linear-gradient(90deg, #00b4d8, #5dca5d);
+      background: linear-gradient(90deg, #00b4d8, #b9d4ff);
       border-radius: 10px;
       transition: width 0.25s ease;
-      box-shadow: 0 0 12px rgba(93,202,93,0.6);
+      box-shadow: 0 0 12px rgba(93, 166, 202, 0.6);
     }
     .bar-percent {
       font-family: 'Press Start 2P', monospace;
@@ -307,9 +301,10 @@
     <div class="overlay-logo">
       <div class="logo-text">
         <span class="aqua">AQUA</span><span class="guard">GUARD</span>
+        <br>
+        <br>
       </div>
-      <div class="logo-tagline">PROTECT THE NILE &nbsp;•&nbsp; SAVE THE VILLAGE &nbsp;•&nbsp; GUARD THE WATER</div>
-    </div>
+
 
     <!-- Play button -->
     <button class="play-btn-wrap" id="play-btn" onclick="startGame()">
@@ -319,7 +314,7 @@
         <div class="triangle"></div>
       </div>
     </button>
-
+<br><br><br>
     <div class="play-label">PRESS TO PLAY</div>
 
   </div>
